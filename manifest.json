@@ -1,28 +1,12 @@
 {
-    "name": "Getting Started Example",
-    "version": "1.0",
-    "description": "Build an Extension!",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
-    "background": {
-        "scripts": ["js/background.js"],
-        "persistent": false
-    },
-    "page_action": {
-        "default_popup": "html/popup.html",
-        "default_icon": {
-            "16": "images/icon_lemon16.png",
-            "24": "images/icon_lemon24.png",
-            "32": "images/icon_lemon32.png",
-            "64": "images/icon_lemon64.png",
-            "128": "images/icon_lemon128.png"
-        }
-    },
-    "icons": {
-        "16": "images/icon_lemon16.png",
-        "24": "images/icon_lemon24.png",
-        "32": "images/icon_lemon32.png",
-        "64": "images/icon_lemon64.png",
-        "128": "images/icon_lemon128.png"
-    },
-    "manifest_version": 2
+  "name": "bear",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["popup.js"]
+  },
+  "permissions": ["tabs"]
 }
