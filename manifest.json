@@ -1,12 +1,19 @@
 {
-  "name": "bear",
+  "name": "Shopezy",
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon_lemon16.png",
+      "24": "icon_lemon24.png",
+      "32": "icon_lemon32.png",
+      "64": "icon_lemon64.png",
+      "128": "icon_lemon128.png"
+    }
   },
   "background": {
     "scripts": ["popup.js"]
   },
-  "permissions": ["tabs"]
+  "permissions": ["tabs", "activeTab"]
 }
