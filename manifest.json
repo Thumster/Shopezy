@@ -1,9 +1,9 @@
 {
   "name": "Shopezy",
-  "version": "1.0",
+  "version": "1.7",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "shop.html",
     "default_icon": {
       "16": "icon_lemon16.png",
       "24": "icon_lemon24.png",

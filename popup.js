@@ -8,70 +8,126 @@ function autofill() {
 }
 
 function openCase() {
-
   window.open("https://app.case.org.sg/complaint.plx", "_blank"); 
+}
+
+function openShopee() {
+  window.open("https://help.shopee.sg/sg/s/topic/0TO6F000000QzHIWA0/returns-refunds", "_blank"); 
+}
+
+function openLazada() {
+  window.open("https://www.lazada.sg/helpcenter/returns/?spm=a2o42.helpcenter.topics-list.3.4dbf455fSru0He", "_blank"); 
+}
+
+function navigateHome() {
+
+
+}
+
+
+function navigateItem() {
+
+  document.getElementById("item").removeAttribute("hidden");
+  document.getElementById("shopee").setAttribute("hidden","");
+  document.getElementById("lazada").setAttribute("hidden","");
+  document.getElementById("itemList").setAttribute("hidden","");
+  document.getElementById("contact").setAttribute("hidden","");
+  document.getElementById("fill").setAttribute("hidden","");
 
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  var openShopee = document.getElementById('openShopee');
+  if(openShopee != null) {
+    openShopee.addEventListener('click', function () {
+      openCase();
+    });
+  }
+
+  var openLazada = document.getElementById('openLazada');
+  if(openLazada != null) {
+    openLazada.addEventListener('click', function () {
+      openCase();
+    });
+  }
+
+  var viewInformation = document.getElementById('viewInformation');
+  if(viewInformation != null) {
+    viewInformation.addEventListener('click', function () {
+      navigateItem();
+    });
+  }
+
+  var generateButton = document.getElementById('autoFill');
+  if(generateButton != null) {
+    generateButton.addEventListener('click', function () {
+      autofill();
+    });
+  }
   
-          var button = document.getElementById('generate');
-          button.addEventListener('click', function () {
-              autofill();
-          });
-
-          var button = document.getElementById('openCase');
-          button.addEventListener('click', function () {
-              openCase();
-          });
-
+  var openCaseForm = document.getElementById('openCase');
+  if(openCaseForm != null) {
+    openCaseForm.addEventListener('click', function () {
+      openCase();
+    });
+  }
+  
   chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
     function(tabs){
 
 
       var currUrl = tabs[0].url;
 
-      if(currUrl == "https://shopee.sg/") {
-        document.body.style.backgroundColor = "orange";
-      
-          document.getElementById("lazada").setAttribute("hidden","");
-          document.getElementById("shopee").removeAttribute("hidden");
-          
-          //document.getElementById("dynamicContent").src = "shopee.html";
+      if(currUrl.match("shopee")) {
+        
 
-          
-          
+        document.getElementById("shopee").removeAttribute("hidden");
 
-          //autofill();
-
-          // $(function(){
-          //   $("#dynamicContent").load("shopee.html"); 
-          // });
+        document.getElementById("lazada").setAttribute("hidden","");
+        document.getElementById("itemList").setAttribute("hidden","");
+        document.getElementById("item").setAttribute("hidden","");
+        document.getElementById("contact").setAttribute("hidden","");
+        document.getElementById("fill").setAttribute("hidden","");
+          
           
 
-      } else {
+      } else if (currUrl.match("lazada")){
       
 
 
         document.getElementById("lazada").removeAttribute("hidden");
+
         document.getElementById("shopee").setAttribute("hidden","");
-
-
-        // if(confirm("do you want to launch case complaint?")){
-        //   if(currUrl == "https://app.case.org.sg/complaint.plx") {
-        //   autofill();
-        // } else {
-        //   openCase();
-        // }
-
-        // }
-
-        
-          
+        document.getElementById("itemList").setAttribute("hidden","");
+        document.getElementById("item").setAttribute("hidden","");
+        document.getElementById("contact").setAttribute("hidden","");        
+        document.getElementById("fill").setAttribute("hidden","");
       
 
-       } 
-      
+       } else if(currUrl.match("https://app.case.org.sg/complaint.plx")) {
+
+
+        document.getElementById("itemList").removeAttribute("hidden");
+        document.getElementById("fill").removeAttribute("hidden");
+
+        document.getElementById("shopee").setAttribute("hidden","");
+        document.getElementById("lazada").setAttribute("hidden","");
+        document.getElementById("item").setAttribute("hidden","");
+        document.getElementById("contact").setAttribute("hidden","");
+
+
+       } else {
+        document.getElementById("itemList").removeAttribute("hidden");
+
+        document.getElementById("fill").setAttribute("hidden", "");
+        document.getElementById("shopee").setAttribute("hidden","");
+        document.getElementById("lazada").setAttribute("hidden","");
+        document.getElementById("item").setAttribute("hidden","");
+        document.getElementById("contact").setAttribute("hidden","");
+
+       }
+
 
 
     }

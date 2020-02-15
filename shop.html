@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Shop" content="">
+    <meta name="author" content="Shopezy">
+
+    <title>Shopezy - Legal Tech</title>
+
+    <!-- Scripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="popup.js" charset="utf-8"></script>
+
+    <!-- Cascading Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="logo" src="icon_lemon32.png" style="height: 20px;">
+                Shopezy
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <a href="#">Detect</a>
+                </li>
+                <p class="navbar-text" style="margin-right: 7px;">Signed in as <a href="#" class="navbar-link">Mark
+                        Otto</a></p>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SHOPEE -->
+    <div hidden class="shopee" id="shopee">
+        <p style="margin-top: 20px; margin-left: 20px;">You are currently on
+            <img alt="company logo" src="shopee-transparent-text.png" style="height: 20px; margin-left: 5px;">
+            <button id="openShopee" name="openShopee" style="background-color: transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;">
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+            </button>
+        </p>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">How can I get the refund for my cancelled order?</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>A refund will be automatically initiated when your order is:</h5>
+                        <ul>
+                            <li>Order is cancelled by seller</li>
+                            <li>Refund request is accepted by seller</li>
+                            <li>Refund request is accepted by Shopee (in the event of a dispute)</li>
+                            <li>Order is automatically cancelled by system due to seller failing to ship order(s)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">How do I return my wrong/damaged item once the
+                            return
+                            request has been confirmed?</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>Local orders (purchase made with local seller):</h5>
+                        <ul>
+                            <li>You will have 3 days to return your request once it is approved by the seller.</li>
+                            <li>A return shipping label will be sent to your email address. If you create your own
+                                shipping
+                                label.</li>
+                        </ul>
+                        <h5>Overseas / cross-border orders:</h5>
+                        <ul>
+                            <li>If return is accepted by Dispute team, the return address will be provided by via email
+                                from
+                                dispute@support.shopee.sg or push notification in Shopee app.</li>
+                            <li>Do ensure that you ship out the return item(s) within 3 days from the date your return
+                                request was approved.</li>
+                            <li>After shipping, remember to enter the Courier Name, Tracking Number (if applicable) or
+                                Shipment proof via the Shopee app!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">How do I raise a dispute on the Shipping Fee
+                            charge?</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>If you have encountered with overcharged shipping fee from NinjaVan or Speedpost Economy,
+                            please
+                            email the supporting details as per below to Shopee Customer Support Team or via the Live
+                            Chat.
+                        </h5>
+                        <ol>
+                            <li>Sample picture of the item & the packaging or after it has been packed</li>
+                            <li>Dimensions (Length x Width x Height) of the item after it has been packed together with
+                                the
+                                packaging</li>
+                            <li>Sample picture of the dimensions (Please provide picture of the parcel being measured
+                                with a
+                                tape)</li>
+                            <li>Weight of the item after it has been packed (best if there's a picture of the item on
+                                the
+                                weighing scale)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">How long would it take for my refund to be
+                            processed?</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>All request for refunds or order cancellation that has been successful will be able to see
+                            the
+                            refund process initiated within 24 hours.
+                        </h5>
+                        <h5>The refund process will be different according to the payment method used to pay for the
+                            order.
+                        </h5>
+                        <h5>If you pay using:</h5>
+                        <p>1) Credit / Debit Card:</p>
+                        <p>Payment will be released back to the card you used to make payment. This process will take
+                            7-14
+                            working days depending on the card issuing bank.</p>
+                        <p>2) All other payment method: (for orders paid using online banking, ATM/Cash Deposit,
+                            ShopeePay)
+                        </p>
+                        <p>Payment will be released to your ShopeePay. You will be able to use it to make future
+                            purchases
+                            through "ShopeePay" or have it withdrawn after you have updated your bank account details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LAZADA -->
+    <div hidden class="lazada" id="lazada">
+        <p style="margin-top: 20px; margin-left: 20px;">You are currently on
+            <img alt="company logo" src="lazada-transparent-text.png" style="height: 20px; margin-left: 5px;">
+            <button id="openLazada" name="openLazada" style="background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;">
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+            </button>
+            
+            
+        <button class="btn btn-primary" name="openShopee" id="openShopee">View Item Information</button>
+
+        </p>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse5">What is Lazada's Return Policy?</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>LazMall items can be returned within 15 days upon receipt of shipment.*</h5>
+                        <br />
+                        <h5>Non-LazMall items can be returned within 7 days upon receipt of shipment, and change of mind
+                            returns are not allowed. Change of Mind is also know as the return reason "Don't want item
+                            anymore" at the returns page.</h5>
+                        <br />
+                        <h5>*If you have changed your mind and would like to return your item, please note that we will
+                            only accept returns of LazMall items that:</h5>
+                        <ul>
+                            <li>Have not been opened</li>
+                            <li>Have all seals and tags intact (if any)</li>
+                            <li>Is unworn, unwashed or unaltered (if applicable)</li>
+                        </ul>
+                        <h5>However, change of mind returns are not applicable for the following products:</h5>
+                        <ul>
+                            <li>Digital goods, such as mobile top up cards and food vouchers</li>
+                            <li>All groceries</li>
+                            <li>All paint and primers</li>
+                            <li>All undergarments</li>
+                            <li>All products that require installation, customisation or are bulky</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse6">What is the return policy for bundled items?</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>For bundled items, all items in the bundle must be returned in order for the return to be
+                            processed.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse7">What is the return policy for items delivered by
+                            Sellers' own fleet?</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>You may only return the item if it is defective or damaged. Once the proof of delivery has
+                            been signed, you may not return the item under Change of Mind.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse8">What is the time frame in which a return request can
+                            be made?</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h5>You can make a return request within 15 days (for LazMall items) and 7 days (for Non-LazMall
+                            items) from the date that the items were received. Please visit our Returns Page for a list
+                            of valid returns reasons.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEM LIST -->
+    <div hidden style="background-color: greenyellow" id="itemList">
+      <h2>Items List Page</h2>
+      
+      
+      <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item Information</button>
+    </div>
+
+    <!-- ITEM DETAILS -->
+    <div hidden style="background-color: hotpink;" id="item">
+      <h2>Item Information Page</h2>
+      
+        
+      <button class="btn btn-primary" name="openCase" id="openCase">Open Case</button>
+    </div>
+
+    <!-- CONTACT -->
+    <div hidden style="background-color: khaki;" name="contact" id="contact">
+      <h2>Contact Merchant Page</h2>
+      
+        
+    </div>
+
+    <!-- Auto fill button-->
+
+    <div hidden name="fill" id="fill" style="background-color: lightblue; text-align: center;">
+      <p></p>
+      <p></p>
+      <button class="btn btn-primary" name="autoFill" id="autoFill">Fill Form</buttonclass="btn btn-primary"> 
+    </div>
+    <!-- <div class="panel panel-default">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="panel-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div> -->
+
+    <!-- <section>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </section> -->
+
+</body>
+
+</html>
