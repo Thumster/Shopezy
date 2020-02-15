@@ -19,8 +19,14 @@ function openLazada() {
   window.open("https://www.lazada.sg/helpcenter/returns/?spm=a2o42.helpcenter.topics-list.3.4dbf455fSru0He", "_blank"); 
 }
 
-function navigateHome() {
+function navigateList() {
 
+  document.getElementById("itemList").removeAttribute("hidden");
+  document.getElementById("shopee").setAttribute("hidden","");
+  document.getElementById("lazada").setAttribute("hidden","");
+  document.getElementById("item").setAttribute("hidden","");
+  document.getElementById("contact").setAttribute("hidden","");
+  document.getElementById("fill").setAttribute("hidden","");
 
 }
 
@@ -37,6 +43,13 @@ function navigateItem() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  var navigateHistory = document.getElementById('history');
+  if(navigateHistory != null) {
+    navigateHistory.addEventListener('click', function () {
+      navigateList();
+    });
+  }
 
   var openShopeeHelp = document.getElementById('openShopee');
   if(openShopeeHelp != null) {
