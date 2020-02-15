@@ -19,6 +19,11 @@ function openLazada() {
   window.open("https://www.lazada.sg/helpcenter/returns/?spm=a2o42.helpcenter.topics-list.3.4dbf455fSru0He", "_blank"); 
 }
 
+function contactShopee(){
+  window.open("https://help.shopee.sg/sg/s/contactus","_blank");
+
+}
+
 function navigateList() {
 
   document.getElementById("itemList").removeAttribute("hidden");
@@ -43,6 +48,13 @@ function navigateItem() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  var contact = document.getElementById('contactSite');
+  if(contact != null) {
+    contact.addEventListener('click', function () {
+      contactShopee();
+    });
+  }
 
   var navigateHistory = document.getElementById('history');
   if(navigateHistory != null) {
@@ -120,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
        } else if(currUrl.match("https://app.case.org.sg/complaint.plx")) {
 
-
         document.getElementById("itemList").removeAttribute("hidden");
         document.getElementById("fill").removeAttribute("hidden");
 
@@ -131,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
        } else {
+
         document.getElementById("itemList").removeAttribute("hidden");
 
         document.getElementById("fill").setAttribute("hidden", "");
@@ -140,9 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("contact").setAttribute("hidden","");
 
        }
-
-
-
     }
   );
   
