@@ -38,17 +38,17 @@ function navigateItem() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  var openShopee = document.getElementById('openShopee');
-  if(openShopee != null) {
-    openShopee.addEventListener('click', function () {
-      openCase();
+  var openShopeeHelp = document.getElementById('openShopee');
+  if(openShopeeHelp != null) {
+    openShopeeHelp.addEventListener('click', function () {
+      openShopee();
     });
   }
 
-  var openLazada = document.getElementById('openLazada');
-  if(openLazada != null) {
-    openLazada.addEventListener('click', function () {
-      openCase();
+  var openLazadaHelp = document.getElementById('openLazada');
+  if(openLazadaHelp != null) {
+    openLazadaHelp.addEventListener('click', function () {
+      openLazada();
     });
   }
 
