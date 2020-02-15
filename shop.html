@@ -185,9 +185,9 @@
         outline:none;">
                 <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
             </button>
-            
-            
-        <button class="btn btn-primary" name="openShopee" id="openShopee">View Item Information</button>
+
+
+            <button class="btn btn-primary" name="openShopee" id="openShopee">View Item Information</button>
 
         </p>
 
@@ -278,34 +278,48 @@
     </div>
 
     <!-- ITEM LIST -->
-    <div hidden style="background-color: greenyellow" id="itemList">
-      <h2>Items List Page</h2>
-      
-      
-      <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item Information</button>
+    <div id="itemList" style="padding: 5px;">
+        <h2>Items List Page</h2>
+        <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+            <div class="panel-body">
+                <div class="container" style="flex-direction: row; display: flex;">
+                    <div><img class="img-responsive" src="shopee_prod1.jpg"
+                            style="margin-top: 13px; height: 80px; border:1px solid lightgray"></div>
+                    <div style="margin-left: 15px;">
+                        <h4 class="product-name"><strong>Ultimate Ears Wonderboom</strong></h4>
+                        <h4><small>smartsg</small></h4>
+                        <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item
+                            Information</button>
+                    </div>
+                    <div style="margin-left: 15px; margin-top: 20px;">
+                        <h4 class="product-price"><strong>$59.00</strong></h4>
+                        <h4 class="product-date"><small>10 Feb 2020</strong></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- ITEM DETAILS -->
     <div hidden style="background-color: hotpink;" id="item">
-      <h2>Item Information Page</h2>
-      
-        
-      <button class="btn btn-primary" name="openCase" id="openCase">Open Case</button>
+        <h2>Item Information Page</h2>
+
+
+        <button class="btn btn-primary" name="openCase" id="openCase">Open Case</button>
     </div>
 
     <!-- CONTACT -->
     <div hidden style="background-color: khaki;" name="contact" id="contact">
-      <h2>Contact Merchant Page</h2>
-      
-        
+        <h2>Contact Merchant Page</h2>
+
+
     </div>
 
     <!-- Auto fill button-->
 
     <div hidden name="fill" id="fill" style="background-color: lightblue; text-align: center;">
-      <p></p>
-      <p></p>
-      <button class="btn btn-primary" name="autoFill" id="autoFill">Fill Form</buttonclass="btn btn-primary"> 
+        <p></p>
+        <p></p>
+        <button class="btn btn-primary" name="autoFill" id="autoFill">Fill Form</buttonclass="btn btn-primary">
     </div>
     <!-- <div class="panel panel-default">
         <img class="card-img-top" src="..." alt="Card image cap">
