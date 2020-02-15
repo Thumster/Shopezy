@@ -280,7 +280,7 @@
     </div>
 
     <!-- ITEM LIST -->
-    <div id="itemList" style="padding: 5px; ">
+    <div hidden id="itemList" style="padding: 5px;">
         <br />
         <br />
         <div class="btn-group" role="group" aria-label="..." style="display:flex; justify-content: center;">
@@ -351,11 +351,36 @@
         </div>
     </div>
     <!-- ITEM DETAILS -->
-    <div hidden style="background-color: hotpink;" id="item">
-        <h2>Item Information Page</h2>
-
-
-        <button class="btn btn-primary" name="openCase" id="openCase">Open Case</button>
+    <div id="item" style="padding: 5px;">
+        <h4>Currently viewing:</h4>
+        <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+            <div class="panel-body">
+                <div class="container" style="flex-direction: row; display: flex;">
+                    <!-- https://shopee.sg/Ultimate-Ears-Wonderboom-Wireless-Bluetooth-Speaker-Cloud-(Free-SGD-7-No-Minimum-Spend-Voucher)-(T-Cs-Apply)-i.91799978.2804491210 -->
+                    <div><img class="img-responsive" src="shopee_prod1.jpg"
+                            style="margin-top: 13px; height: 80px; border:1px solid lightgray"></div>
+                    <div style="margin-left: 15px; width: 250px;">
+                        <h4 class="product-name"><strong>Ultimate Ears Wonderboom</strong></h4>
+                        <h4><small>smartsg</small></h4>
+                        <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item
+                            Information</button>
+                    </div>
+                    <div style="margin-left: 15px; margin-top: 20px;">
+                        <h4 class="product-price"><strong>$59.00</strong></h4>
+                        <h4 class="product-date"><small>10 Feb 2020</strong></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div style="display: flex; justify-content: center;"><h3><strong>What would you like to do?</strong></h3></div>
+        <p style="display: flex; justify-content: center;">
+            <button class="btn btn-primary" name="contactMerchant" id="contactMerchant" style="width: 200px;">Contact
+                Merchant</button></p>
+        <p style="display: flex; justify-content: center;"><button class="btn btn-success" name="contactSite" id="contactSite" style="width: 200px;">Contact
+                Site</button></p>
+        <p style="display: flex; justify-content: center;"><button class="btn btn-danger" name="openCase" id="openCase" style="width: 200px;">Generate Case
+                Complaint</button></p>
     </div>
 
     <!-- CONTACT -->
@@ -372,48 +397,6 @@
         <p></p>
         <button class="btn btn-primary" name="autoFill" id="autoFill">Fill Form</buttonclass="btn btn-primary">
     </div>
-    <!-- <div class="panel panel-default">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="panel-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div> -->
-
-    <!-- <section>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
-    </section> -->
-
 </body>
 
 
