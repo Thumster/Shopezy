@@ -42,6 +42,20 @@ function navigateItem() {
 
 }
 
+function navigateItem2() {
+
+    document.getElementById("item2").removeAttribute("hidden");
+    document.getElementById("shopee").setAttribute("hidden", "");
+    document.getElementById("lazada").setAttribute("hidden", "");
+    document.getElementById("itemList").setAttribute("hidden", "");
+
+}
+
+function refreshList() {
+    navigateList();
+    document.getElementById("newProd").removeAttribute("hidden");
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     var contact = document.getElementById('contactSite');
@@ -78,6 +92,19 @@ document.addEventListener('DOMContentLoaded', function() {
             navigateItem();
         });
     }
+    var viewInformation0 = document.getElementById('viewInformation0');
+    if (viewInformation0 != null) {
+        viewInformation0.addEventListener('click', function() {
+            navigateItem2();
+        });
+    }
+
+    var refresh = document.getElementById('refresh');
+    if (refresh != null) {
+        refresh.addEventListener('click', function() {
+            refreshList();
+        });
+    }
 
     var generateButton = document.getElementById('autoFill');
     if (generateButton != null) {
@@ -107,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("lazada").setAttribute("hidden", "");
                 document.getElementById("itemList").setAttribute("hidden", "");
                 document.getElementById("item").setAttribute("hidden", "");
+                document.getElementById("item2").setAttribute("hidden", "");
 
 
 
@@ -119,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("shopee").setAttribute("hidden", "");
                 document.getElementById("itemList").setAttribute("hidden", "");
                 document.getElementById("item").setAttribute("hidden", "");
+                document.getElementById("item2").setAttribute("hidden", "");
 
 
             } else if (currUrl.match("https://app.case.org.sg/complaint.plx")) {
@@ -127,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("shopee").setAttribute("hidden", "");
                 document.getElementById("lazada").setAttribute("hidden", "");
                 document.getElementById("item").setAttribute("hidden", "");
+                document.getElementById("item2").setAttribute("hidden", "");
 
 
             } else {
@@ -136,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("shopee").setAttribute("hidden", "");
                 document.getElementById("lazada").setAttribute("hidden", "");
                 document.getElementById("item").setAttribute("hidden", "");
+                document.getElementById("item2").setAttribute("hidden", "");
 
             }
         }
