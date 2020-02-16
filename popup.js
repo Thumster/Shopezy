@@ -23,12 +23,87 @@ function contactShopee() {
 
 }
 
-function navigateList() {
+function displayShopeeList(){
+  document.getElementById("shopeeHeader").removeAttribute("hidden");
+  document.getElementById("shopeeListItem1").removeAttribute("hidden");
+  document.getElementById("shopeeListItem2").removeAttribute("hidden");
+  document.getElementById("shopeeListItem3").removeAttribute("hidden");
+  
+  document.getElementById("lazadaHeader").setAttribute("hidden", "");
+  document.getElementById("lazadaListItem1").setAttribute("hidden", "");
+  document.getElementById("selectHeader").setAttribute("hidden", "");
+}
+
+function displayLazadaList(){
+  
+  document.getElementById("lazadaHeader").removeAttribute("hidden");
+  document.getElementById("lazadaListItem1").removeAttribute("hidden");
+  
+  document.getElementById("shopeeHeader").setAttribute("hidden", "");
+  document.getElementById("shopeeListItem1").setAttribute("hidden", "");
+  document.getElementById("shopeeListItem2").setAttribute("hidden", "");
+  document.getElementById("shopeeListItem3").setAttribute("hidden", "");
+  document.getElementById("selectHeader").setAttribute("hidden", "");
+}
+
+function contactM2() {
+
+  document.getElementById("dummyText").removeAttribute("hidden");
+
+  var range = document.createRange();
+  range.selectNode(document.getElementById("dummyText"));
+  window.getSelection().removeAllRanges(); // clear current selection
+  window.getSelection().addRange(range); // to select text
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();// to deselect
+  
+  alert("Copied message to clip board! [ctrl - v]");
+
+
+  document.getElementById("dummyText").setAttribute("hidden", "");
+  
+  window.open("https://shopee.sg/kaxoe.sg", "_blank");
+
+}
+
+function contactM() {
+
+
+  document.getElementById("dummyText").removeAttribute("hidden");
+
+  var range = document.createRange();
+  range.selectNode(document.getElementById("dummyText"));
+  window.getSelection().removeAllRanges(); // clear current selection
+  window.getSelection().addRange(range); // to select text
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();// to deselect
+  
+  alert("Copied message to clip board! [ctrl - v]");
+
+
+  document.getElementById("dummyText").setAttribute("hidden", "");
+
+  window.open("https://shopee.sg/worldgymsg", "_blank");
+
+}
+
+function showListHeaders() {
 
     document.getElementById("itemList").removeAttribute("hidden");
+    document.getElementById("selectHeader").removeAttribute("hidden");
+    
+
     document.getElementById("shopee").setAttribute("hidden", "");
     document.getElementById("lazada").setAttribute("hidden", "");
     document.getElementById("item").setAttribute("hidden", "");
+    
+    document.getElementById("item2").setAttribute("hidden", "");
+    document.getElementById("shopeeListItem1").setAttribute("hidden", "");
+    document.getElementById("shopeeListItem2").setAttribute("hidden", "");
+    document.getElementById("shopeeListItem3").setAttribute("hidden", "");
+    document.getElementById("lazadaListItem1").setAttribute("hidden", "");
+    document.getElementById("shopeeHeader").setAttribute("hidden", "");
+    document.getElementById("lazadaHeader").setAttribute("hidden", "");
 
 }
 
@@ -39,6 +114,7 @@ function navigateItem() {
     document.getElementById("shopee").setAttribute("hidden", "");
     document.getElementById("lazada").setAttribute("hidden", "");
     document.getElementById("itemList").setAttribute("hidden", "");
+    document.getElementById("selectHeader").setAttribute("hidden", "");
 
 }
 
@@ -48,15 +124,30 @@ function navigateItem2() {
     document.getElementById("shopee").setAttribute("hidden", "");
     document.getElementById("lazada").setAttribute("hidden", "");
     document.getElementById("itemList").setAttribute("hidden", "");
+    document.getElementById("selectHeader").setAttribute("hidden", "");
 
 }
 
 function refreshList() {
     navigateList();
-    document.getElementById("newProd").removeAttribute("hidden");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    var slb = document.getElementById('shopeeListButton');
+    if (slb != null) {
+        slb.addEventListener('click', function() {
+            displayShopeeList();
+        });
+    }
+
+    var llb = document.getElementById('lazadaListButton');
+    if (llb != null) {
+      llb.addEventListener('click', function() {
+            displayLazadaList();
+        });
+    }
+
 
     var contact = document.getElementById('contactSite');
     if (contact != null) {
@@ -65,10 +156,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    var contactMerchant0 = document.getElementById('contactMerchant0');
+    if (contactMerchant0 != null) {
+      contactMerchant0.addEventListener('click', function() {
+        contactM();
+        });
+    }
+    
+    var contactMerchant = document.getElementById('contactMerchant');
+    if (contactMerchant != null) {
+      contactMerchant.addEventListener('click', function() {
+        contactM2();
+        });
+    }
+
     var navigateHistory = document.getElementById('history');
     if (navigateHistory != null) {
         navigateHistory.addEventListener('click', function() {
-            navigateList();
+            showListHeaders();
         });
     }
 

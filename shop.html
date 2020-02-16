@@ -256,15 +256,27 @@
         <br />
         <br />
         <div class="btn-group" role="group" aria-label="..." style="display:flex; justify-content: center;">
-            <button type="button" class="btn btn-default"><img src="shopee-transparent-text.png"
+            <button id="shopeeListButton" type="button" class="btn btn-default"><img src="shopee-transparent-text.png"
                     style="height: 30px;"></button>
-            <button type="button" class="btn btn-default"><img src="lazada-transparent-text.png"
+            <button id="lazadaListButton" type="button" class="btn btn-default"><img src="lazada-transparent-text.png"
                     style="height: 30px;"></button>
         </div>
         <br />
         <br />
-        <h4>Past transactions from <strong>Shopee</strong></h4>
-        <div hidden id="newProd" class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+        
+        <div id="selectHeader" style="text-align: center">
+            <h4><strong>Select an e-commerce site </strong></h4>
+        </div>
+
+        <div hidden id="shopeeHeader">
+            <h4>Past transactions from <strong>Shopee</strong></h4>
+        </div>
+        
+        <div hidden id="lazadaHeader">
+            <h4>Past transactions from <strong>Lazada</strong></h4>
+        </div>
+        
+        <div hidden id="lazadaListItem1" class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
             <div class="panel-body">
                 <div class="container" style="flex-direction: row; display: flex;">
                     <!-- https://shopee.sg/5A-Fast-Charging-Cable-Micro-Usb-Type-C-Lightning-for-IPhone-Android-phone-P20-P30-Mate-20-Pro-Quick-Charger-USB-Cable-i.84301799.1979649039 -->
@@ -282,7 +294,28 @@
                 </div>
             </div>
         </div>
-        <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+        
+        <div hidden id="shopeeListItem1" class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+            <div class="panel-body">
+                <div class="container" style="flex-direction: row; display: flex;">
+                    <!-- https://shopee.sg/3-Ply-Surgical-Mask-Random-Colour-Set-of-50-i.222628544.4416524871 -->
+                    <div><img class="img-responsive" src="shopee_prod3.jpg"
+                            style="margin-top: 13px; height: 80px; border:1px solid lightgray"></div>
+                    <div style="margin-left: 15px;  width: 250px;">
+                        <h4 class="product-name"><strong>3 Ply Surgical Mask</strong></h4>
+                        <h4><small>worldgymsg</small></h4>
+                        <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item
+                            Information</button>
+                    </div>
+                    <div style="margin-left: 15px; margin-top: 20px;">
+                        <h4 class="product-price"><strong>$59.90</strong></h4>
+                        <h4 class="product-date"><small>15 Feb 2020</strong></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div hidden id="shopeeListItem2" class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
             <div class="panel-body">
                 <div class="container" style="flex-direction: row; display: flex;">
                     <!-- https://shopee.sg/Ultimate-Ears-Wonderboom-Wireless-Bluetooth-Speaker-Cloud-(Free-SGD-7-No-Minimum-Spend-Voucher)-(T-Cs-Apply)-i.91799978.2804491210 -->
@@ -300,7 +333,8 @@
                 </div>
             </div>
         </div>
-        <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
+        
+        <div hidden id="shopeeListItem3" class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
             <div class="panel-body">
                 <div class="container" style="flex-direction: row; display: flex; ">
                     <!-- https://shopee.sg/-Dibea-Official-Store-Dibea-F20-MAX-Cordless-Vacuum-Cleaner-Local-Set-i.63371453.2595758943 -->
@@ -319,6 +353,11 @@
                 </div>
             </div>
         </div>
+        
+    </div>
+    <!-- ITEM DETAILS -->
+    <div hidden id="item" style="padding: 5px;">
+        <h4>Currently viewing:</h4>
         <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
             <div class="panel-body">
                 <div class="container" style="flex-direction: row; display: flex;">
@@ -328,33 +367,11 @@
                     <div style="margin-left: 15px;  width: 250px;">
                         <h4 class="product-name"><strong>3 Ply Surgical Mask</strong></h4>
                         <h4><small>worldgymsg</small></h4>
-                        <button class="btn btn-primary" name="viewInformation" id="viewInformation">View Item
-                            Information</button>
+                        
                     </div>
                     <div style="margin-left: 15px; margin-top: 20px;">
                         <h4 class="product-price"><strong>$59.90</strong></h4>
-                        <h4 class="product-date"><small>30 Jan 2020</strong></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ITEM DETAILS -->
-    <div hidden id="item" style="padding: 5px;">
-        <h4>Currently viewing:</h4>
-        <div class="panel" style="border: 1px ridge lightblue; border-radius: 5px;">
-            <div class="panel-body">
-                <div class="container" style="flex-direction: row; display: flex;">
-                    <!-- https://shopee.sg/Ultimate-Ears-Wonderboom-Wireless-Bluetooth-Speaker-Cloud-(Free-SGD-7-No-Minimum-Spend-Voucher)-(T-Cs-Apply)-i.91799978.2804491210 -->
-                    <div><img class="img-responsive" src="shopee_prod1.jpg"
-                            style="margin-top: 13px; height: 80px; border:1px solid lightgray"></div>
-                    <div style="margin-left: 15px; width: 250px;">
-                        <h4 class="product-name"><strong>Ultimate Ears Wonderboom</strong></h4>
-                        <h4><small>smartsg</small></h4>
-                    </div>
-                    <div style="margin-left: 15px; margin-top: 20px;">
-                        <h4 class="product-price"><strong>$59.00</strong></h4>
-                        <h4 class="product-date"><small>10 Feb 2020</strong></h4>
+                        <h4 class="product-date"><small>15 Feb 2020</strong></h4>
                     </div>
                 </div>
             </div>
@@ -362,7 +379,7 @@
         <br />
         <div style="display: flex; justify-content: center;"><h3><strong>What would you like to do?</strong></h3></div>
         <p style="display: flex; justify-content: center;">
-            <button class="btn btn-primary" name="contactMerchant" id="contactMerchant" style="width: 200px;">Contact
+            <button class="btn btn-primary" name="contactMerchant0" id="contactMerchant0" style="width: 200px;">Contact
                 Merchant</button></p>
         <p style="display: flex; justify-content: center;"><button class="btn btn-success" name="contactSite" id="contactSite" style="width: 200px;">Contact
                 Site</button></p>
@@ -399,6 +416,10 @@
         <p style="display: flex; justify-content: center;"><button class="btn btn-warning" name="autoFill" id="autoFill" style="width: 200px;">Autofill Case
                 </button></p>
     </div>
+
+
+    <div hidden style="color: white;" id="dummyText">[Transaction id: 383410390] The surgical mask i ordered 10 days ago just arrived and it is defective with holes. I would like to request for a refund.<div>
+
 </body>
 
 

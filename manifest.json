@@ -22,5 +22,5 @@
     "background": {
         "scripts": ["popup.js"]
     },
-    "permissions": ["tabs", "activeTab"]
+    "permissions": ["tabs", "activeTab", "clipboardRead", "clipboardWrite "]
 }
