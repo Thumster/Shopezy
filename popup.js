@@ -275,3 +275,9 @@ $(function() {
     $(".transBtn").val($(this).text());
   });
 });
+$(function() {
+  $(".outcome li a").click(function() {
+    $(".outcomeBtn").text($(this).text());
+    $(".outcomeBtn").val($(this).text());
+  });
+});
