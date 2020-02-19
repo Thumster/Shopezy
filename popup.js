@@ -58,11 +58,11 @@ function contactM2() {
   document.execCommand("copy");
   window.getSelection().removeAllRanges(); // to deselect
 
-  alert("Copied message to clip board! [ctrl - v]");
+  alert("Copied message to clip board!");
 
   document.getElementById("dummyText").setAttribute("hidden", "");
 
-  window.open("https://shopee.sg/kaxoe.sg", "_blank");
+  window.open("https://redmart.lazada.sg/support/?spm=a2o42.lazmart_channel.header.6.485d48a6jwjklq", "_blank");
 }
 
 function contactM() {
@@ -75,7 +75,7 @@ function contactM() {
   document.execCommand("copy");
   window.getSelection().removeAllRanges(); // to deselect
 
-  alert("Copied message to clip board! [ctrl - v]");
+  alert("Copied message to clip board!");
 
   document.getElementById("dummyText").setAttribute("hidden", "");
 
@@ -121,100 +121,108 @@ function refreshList() {
 
 document.addEventListener(
   "DOMContentLoaded",
-  function() {
+  function () {
+
+    var aGen = document.getElementById("autoGenerate");
+    if (aGen != null) {
+      aGen.addEventListener("click", function () {
+        document.getElementById("complaintArea").value = "The 3 Ply Surgical Mask I purchased on 15 Feb is defective. And I would like to have a refund.";
+      });
+    }
+
     var slb = document.getElementById("shopeeListButton");
     if (slb != null) {
-      slb.addEventListener("click", function() {
+      slb.addEventListener("click", function () {
         displayShopeeList();
       });
     }
 
     var llb = document.getElementById("lazadaListButton");
     if (llb != null) {
-      llb.addEventListener("click", function() {
+      llb.addEventListener("click", function () {
         displayLazadaList();
       });
     }
 
     var contact = document.getElementById("contactSite");
     if (contact != null) {
-      contact.addEventListener("click", function() {
+      contact.addEventListener("click", function () {
         contactShopee();
       });
     }
 
     var contactMerchant0 = document.getElementById("contactMerchant0");
     if (contactMerchant0 != null) {
-      contactMerchant0.addEventListener("click", function() {
+      contactMerchant0.addEventListener("click", function () {
         contactM();
       });
     }
 
     var contactMerchant = document.getElementById("contactMerchant");
     if (contactMerchant != null) {
-      contactMerchant.addEventListener("click", function() {
+      contactMerchant.addEventListener("click", function () {
         contactM2();
       });
     }
 
     var navigateHistory = document.getElementById("history");
     if (navigateHistory != null) {
-      navigateHistory.addEventListener("click", function() {
+      navigateHistory.addEventListener("click", function () {
         showListHeaders();
       });
     }
 
     var openShopeeHelp = document.getElementById("openShopee");
     if (openShopeeHelp != null) {
-      openShopeeHelp.addEventListener("click", function() {
+      openShopeeHelp.addEventListener("click", function () {
         openShopee();
       });
     }
 
     var openLazadaHelp = document.getElementById("openLazada");
     if (openLazadaHelp != null) {
-      openLazadaHelp.addEventListener("click", function() {
+      openLazadaHelp.addEventListener("click", function () {
         openLazada();
       });
     }
 
     var viewInformation = document.getElementById("viewInformation");
     if (viewInformation != null) {
-      viewInformation.addEventListener("click", function() {
+      viewInformation.addEventListener("click", function () {
         navigateItem();
       });
     }
     var viewInformation0 = document.getElementById("viewInformation0");
     if (viewInformation0 != null) {
-      viewInformation0.addEventListener("click", function() {
+      viewInformation0.addEventListener("click", function () {
         navigateItem2();
       });
     }
 
     var refresh = document.getElementById("refresh");
     if (refresh != null) {
-      refresh.addEventListener("click", function() {
+      refresh.addEventListener("click", function () {
         refreshList();
       });
     }
 
     var generateButton = document.getElementById("autoFill");
     if (generateButton != null) {
-      generateButton.addEventListener("click", function() {
+      generateButton.addEventListener("click", function () {
         autofill();
       });
     }
 
     var openCaseForm = document.getElementById("openCase");
     if (openCaseForm != null) {
-      openCaseForm.addEventListener("click", function() {
+      openCaseForm.addEventListener("click", function () {
         openCase();
       });
     }
 
     chrome.tabs.query(
       { active: true, windowId: chrome.windows.WINDOW_ID_CURRENT },
-      function(tabs) {
+      function (tabs) {
         var currUrl = tabs[0].url;
 
         if (currUrl.match("shopee")) {
@@ -239,7 +247,7 @@ document.addEventListener(
           document.getElementById("item2").setAttribute("hidden", "");
         } else {
           // UNCOMMENT HERE
-          // document.getElementById("itemList").removeAttribute("hidden");
+          document.getElementById("itemList").removeAttribute("hidden");
 
           document.getElementById("shopee").setAttribute("hidden", "");
           document.getElementById("lazada").setAttribute("hidden", "");
@@ -252,31 +260,20 @@ document.addEventListener(
   false
 );
 
-// $(".dropdown-menu li a").click(function() {
-//   $(this)
-//     .parents(".dropdown")
-//     .find(".btn")
-//     .html($(this).text() + ' <span class="caret"></span>');
-//   $(this)
-//     .parents(".dropdown")
-//     .find(".btn")
-//     .val($(this).data("value"));
-// });
-
-$(function() {
-  $(".nature li a").click(function() {
+$(function () {
+  $(".nature li a").click(function () {
     $(".natureBtn").text($(this).text());
     $(".natureBtn").val($(this).text());
   });
 });
-$(function() {
-  $(".trans li a").click(function() {
+$(function () {
+  $(".trans li a").click(function () {
     $(".transBtn").text($(this).text());
     $(".transBtn").val($(this).text());
   });
 });
-$(function() {
-  $(".outcome li a").click(function() {
+$(function () {
+  $(".outcome li a").click(function () {
     $(".outcomeBtn").text($(this).text());
     $(".outcomeBtn").val($(this).text());
   });
