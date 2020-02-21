@@ -49,10 +49,10 @@ function displayLazadaList() {
 }
 
 function contactM2() {
-  document.getElementById("dummyText").removeAttribute("hidden");
+  //document.getElementById("dummyText").removeAttribute("hidden");
 
   var range = document.createRange();
-  range.selectNode(document.getElementById("dummyText"));
+  range.selectNode(document.getElementById("complaintArea"));
   window.getSelection().removeAllRanges(); // clear current selection
   window.getSelection().addRange(range); // to select text
   document.execCommand("copy");
@@ -60,16 +60,16 @@ function contactM2() {
 
   alert("Copied message to clip board!");
 
-  document.getElementById("dummyText").setAttribute("hidden", "");
+  //document.getElementById("dummyText").setAttribute("hidden", "");
 
   window.open("https://redmart.lazada.sg/support/?spm=a2o42.lazmart_channel.header.6.485d48a6jwjklq", "_blank");
 }
 
 function contactM() {
-  document.getElementById("dummyText").removeAttribute("hidden");
+  //document.getElementById("dummyText").removeAttribute("hidden");
 
   var range = document.createRange();
-  range.selectNode(document.getElementById("dummyText"));
+  range.selectNode(document.getElementById("complaintArea"));
   window.getSelection().removeAllRanges(); // clear current selection
   window.getSelection().addRange(range); // to select text
   document.execCommand("copy");
@@ -77,7 +77,7 @@ function contactM() {
 
   alert("Copied message to clip board!");
 
-  document.getElementById("dummyText").setAttribute("hidden", "");
+  //document.getElementById("dummyText").setAttribute("hidden", "");
 
   window.open("https://shopee.sg/worldgymsg", "_blank");
 }
@@ -126,7 +126,7 @@ document.addEventListener(
     var aGen = document.getElementById("autoGenerate");
     if (aGen != null) {
       aGen.addEventListener("click", function () {
-        document.getElementById("complaintArea").value = "The 3 Ply Surgical Mask I purchased on 15 Feb is defective. And I would like to have a refund.";
+        document.getElementById("complaintArea").value = "Dear Seller, \nThe [Surgical Masks 4 Ply Earloop] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for. \nThank you.";
       });
     }
 

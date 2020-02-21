@@ -102,23 +102,23 @@ els[i].value = "97255472";}
 
 var els=document.getElementsByName("COMPLAINT_VENDOR_NAME");
 for (var i=0;i<els.length;i++) {
-els[i].value = "World Gym Singapore";}
+els[i].value = "1721everdeen";}
 
 var els=document.getElementsByName("COMPLAINT_VENDOR_ADDRESS1");
 for (var i=0;i<els.length;i++) {
-els[i].value = "NorthPoint City (South wing)";}
+els[i].value = "Wintech Centre";}
 
 var els=document.getElementsByName("COMPLAINT_VENDOR_UNIT");
 for (var i=0;i<els.length;i++) {
-els[i].value = "#B1-139 ";}
+els[i].value = "#07-03";}
 
 var els=document.getElementsByName("COMPLAINT_VENDOR_ADDRESS2");
 for (var i=0;i<els.length;i++) {
-els[i].value = "1 NorthPoint Drive";}
+els[i].value = "6 Ubi Road 1";}
 
 var els=document.getElementsByName("COMPLAINT_VENDOR_POSTALCODE");
 for (var i=0;i<els.length;i++) {
-els[i].value = "768019";}
+els[i].value = "408726";}
 
 var els=document.getElementsByName("COMPLAINT_NATURE_ID");
 for (var i=0;i<els.length;i++) {
@@ -162,4 +162,5 @@ els[i].value = "1";}
 
 var els=document.getElementsByName("COMPLAINT_SUMMARY");
 for (var i=0;i<els.length;i++) {
-els[i].value = "The 3 Ply Surgical Mask I purchased on 15 Feb is defective. And I would like to have a refund.";}
+els[i].value = "The [Surgical Masks 4 Ply Earloop] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for.";
+}
