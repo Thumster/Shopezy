@@ -79,7 +79,7 @@ function contactM() {
 
   //document.getElementById("dummyText").setAttribute("hidden", "");
 
-  window.open("https://shopee.sg/worldgymsg", "_blank");
+  window.open("https://shopee.sg/1721everdeen", "_blank");
 }
 
 function showListHeaders() {
@@ -126,7 +126,7 @@ document.addEventListener(
     var aGen = document.getElementById("autoGenerate");
     if (aGen != null) {
       aGen.addEventListener("click", function () {
-        document.getElementById("complaintArea").value = "Dear Seller, \nThe [Surgical Masks 4 Ply Earloop] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for. \nThank you.";
+        document.getElementById("complaintArea").value = "Dear Seller, \nThe [SURGICAL MASK 3 PLY 10 MASKS] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for. \nThank you.";
       });
     }
 

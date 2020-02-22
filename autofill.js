@@ -150,11 +150,11 @@ els[i].value = "6";}
 
 var els=document.getElementsByName("COMPLAINT_CONTRACT_VALUE");
 for (var i=0;i<els.length;i++) {
-els[i].value = "50";}
+els[i].value = "14";}
 
 var els=document.getElementsByName("COMPLAINT_QUANTUM_VALUE");
 for (var i=0;i<els.length;i++) {
-els[i].value = "50";}
+els[i].value = "14";}
 
 var els=document.getElementsByName("COMPLAINT_ONLINE");
 for (var i=0;i<els.length;i++) {
@@ -162,5 +162,5 @@ els[i].value = "1";}
 
 var els=document.getElementsByName("COMPLAINT_SUMMARY");
 for (var i=0;i<els.length;i++) {
-els[i].value = "The [Surgical Masks 4 Ply Earloop] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for.";
+els[i].value = "The [SURGICAL MASK 3 PLY 10 MASKS] I purchased 7 days ago on 15 February 2020 is defective and does not conform to product description. I would like to have a refund and claim back the full price of the item paid for.";
 }
